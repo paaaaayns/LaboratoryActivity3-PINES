@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="29dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblForm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Name"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Address"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutContact"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Contact No."
+                app:prefixText="+63"
+                app:prefixTextColor="@color/purple_500"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="203dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Email Address"
+                app:suffixText="@gmail.com"
+                app:suffixTextColor="@color/purple_500"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutContact"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAge"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Age"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthday"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Birthday"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutAge"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthplace"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="168dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Birthplace"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutBirthday"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disBirthplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCitizenship"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Citizenship"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disCitizenship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCivilStatus"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="182dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Civil Status"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutCitizenship"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disCivilStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutReligion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Religion"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCivilStatus">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disReligion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFatherName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="182dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Father's Name"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutReligion">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disFatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFatherOccupation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Occupation"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutFatherName"
+                app:layout_constraintTop_toBottomOf="@+id/layoutReligion">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disFatherOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMotherName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="182dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Mother's Name"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFatherOccupation">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disMotherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMotherOccupation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Occupation"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutMotherName"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFatherName">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disMotherOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblForm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:drawableStart="@drawable/ic_educ"
+                android:drawablePadding="10dp"
+                android:text="Educational Background"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutMotherOccupation" />
+
+            <TextView
+                android:id="@+id/lblPrimary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Primary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrimarySchool"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Elementary School"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disPrimarySchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrimaryInclusiveYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+
+                android:hint="Inclusive Year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disPrimaryInclusiveYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblSecondary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Secondary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPrimaryInclusiveYear" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondarySchoolJHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Junior High School"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblSecondary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disSecondarySchoolJHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryInclusiveYearJHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+
+                android:hint="Inclusive Year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disSecondaryInclusiveYearJHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondarySchoolSHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Senior High School"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolJHS">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disSecondarySchoolSHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryInclusiveYearSHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+
+                android:hint="Inclusive Year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolJHS">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disSecondaryInclusiveYearSHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblTertiary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Tertiary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolSHS" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTertiarySchool"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="College University"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblTertiary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disTertiarySchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTertiaryInclusiveYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+
+                android:hint="Inclusive Year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblTertiary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disTertiaryInclusiveYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblForm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:drawableStart="@drawable/ic_emergency"
+                android:drawablePadding="10dp"
+                android:text="Emergency Contact"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutTertiarySchool" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Name"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disEmergencyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyRelationship"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Relationship"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disEmergencyRelationship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Address"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyRelationship">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disEmergencyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyContact"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Contact No."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyAddress"
+                app:prefixText="+63"
+                app:prefixTextColor="@color/purple_500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/disEmergencyContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="Back"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyContact"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

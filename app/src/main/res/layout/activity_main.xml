@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="106dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblForm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Name"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Address"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutContact"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Contact No."
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/layoutAddress"
+                app:prefixText="+63"
+                app:prefixTextColor="@color/purple_500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Email Address"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/layoutContact"
+                app:suffixText="@gmail.com"
+                app:suffixTextColor="@color/purple_500">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAge"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Age"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthdayMM"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="BDayMM"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBirthdayMM"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthdayDD"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="BDayDD"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutBirthdayMM"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBirthdayDD"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthdayYYYY"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="121dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="BDayYYYY"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toEndOf="@+id/layoutBirthdayDD"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBirthdayYYYY"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="4" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBirthplace"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Birthplace"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutBirthdayMM">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBirthplace"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCitizenship"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Citizenship"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutBirthplace">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCitizenship"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCivilStatus"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Civil Status"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCitizenship">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownCivilStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutReligion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Religion"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCivilStatus">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtReligion"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFatherName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Father's Name"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutReligion">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFatherName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFatherOccupation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Father's Occupation"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFatherName">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFatherOccupation"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMotherName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Mother's Name"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFatherOccupation">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMotherName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMotherOccupation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Mother's Occupation"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutMotherName">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMotherOccupation"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblForm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:drawableStart="@drawable/ic_educ"
+                android:drawablePadding="10dp"
+                android:text="Educational Background"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutMotherOccupation" />
+
+            <TextView
+                android:id="@+id/lblPrimary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Primary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrimarySchool"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Elementary School"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPrimarySchool"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrimaryStartYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Start Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPrimarySchool">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownPrimaryStartYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPrimaryEndYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="End Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPrimarySchool">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownPrimaryEndYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblSecondary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Secondary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPrimaryStartYear" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondarySchoolJHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Junior High School"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblSecondary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSecondarySchoolJHS"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryStartYearJHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Start Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolJHS">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownSecondaryStartYearJHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryEndYearJHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="End Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolJHS">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownSecondaryEndYearJHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondarySchoolSHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Senior High School"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondaryStartYearJHS">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSecondarySchoolSHS"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryStartYearSHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Start Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolSHS">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownSecondaryStartYearSHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSecondaryEndYearSHS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="End Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondarySchoolSHS">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownSecondaryEndYearSHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblTertiary"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Tertiary Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSecondaryStartYearSHS" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTertiarySchool"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="College University"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblTertiary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTertiarySchool"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTertiaryStartYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+
+                android:hint="Start Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutTertiarySchool">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownTertiaryStartYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTertiaryEndYear"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="End Year"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutTertiarySchool">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ddownTertiaryEndYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="none"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblForm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:drawableStart="@drawable/ic_emergency"
+                android:drawablePadding="10dp"
+                android:text="Emergency Contact"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutTertiaryStartYear" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Name"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblForm3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmergencyName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyRelationship"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Relationship"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmergencyRelationship"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Address"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyRelationship">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmergencyAddress"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmergencyContact"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:hint="Contact No."
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:helperTextTextColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyAddress"
+                app:prefixText="+63"
+                app:prefixTextColor="@color/purple_500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmergencyContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="Clear"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyContact"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="Submit"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmergencyContact"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
